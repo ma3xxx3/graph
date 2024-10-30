@@ -1417,7 +1417,7 @@ class BarPlot(Plot):
 
         point_width = (
             len(self.points) *
-            float(abs(self.graph.xmax) + abs(self.graph.xmin)) /
+            float(self.graph.xmax - self.graph.xmin) /
             float(abs(max(self.points)[0]) + abs(min(self.points)[0])))
 
         if not self.points:
